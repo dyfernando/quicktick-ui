@@ -1,0 +1,48 @@
+@import "./theme";
+
+body {
+  margin: 0;
+  font-family: $primary-fonts;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $green-scale-4;
+}
+
+::-webkit-file-upload-button {
+  background: $white-scale-2;
+  color: $green-scale-1;
+  padding: 3%;
+  border: {
+    radius: 5px;
+    style: outset;
+    color: $white-scale-1;
+  }
+  cursor: pointer;
+}
+
+.fa-home,
+.fa-file-upload {
+  font-size: 30px;
+  color: white;
+}
+
+@mixin general-alignment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin icon-button {
+  background-color: $green-scale-1;
+  border-radius: 5px;
+  border-width: 0px;
+  cursor: pointer;
+}
+
+@mixin content {
+  @include general-alignment;
+  margin: 0% 18%;
+  min-height: 70vh;
+  box-sizing: border-box;
+  background-color: $green-scale-3;
+}

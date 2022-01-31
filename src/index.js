@@ -1,12 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { BrowserRouter } from "react-router-dom";
+import { ReconcileProvider } from "./contexts/reconcile.context";
+import './styles/global.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <ReconcileProvider>
+        <App />
+      </ReconcileProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

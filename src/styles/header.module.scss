@@ -1,0 +1,43 @@
+@import "./global";
+@import "./theme";
+
+.Header {
+  margin: 0% 18%;
+  align-items: center;
+  justify-content: center;
+  background: {
+    image: linear-gradient($white-scale-3, $white-scale-3),
+      url(../images/background.jpg);
+    size: cover;
+  }
+
+  &-border {
+    height: 50px;
+    @include general-alignment;
+    justify-content: space-between;
+    background-color: $green-scale-1;
+
+    img,
+    button {
+      display: inline-block;
+    }
+
+    button {
+      @include icon-button;
+    }
+  }
+
+  &-title {
+    padding: 0% 7% 0.1%;
+
+    p {
+      margin: 4% 0% 3%;
+      font: {
+        family: $primary-fonts;
+        size: 45px;
+        weight: bold;
+      }
+      color: $green-scale-1;
+    }
+  }
+}

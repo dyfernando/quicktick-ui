@@ -1,0 +1,53 @@
+@import "./global.scss";
+@import "./theme";
+
+.Reconcile {
+  @include content;
+
+  &-group {
+    width: 90%;
+    padding: 2%;
+    height: 250px;
+    font-family: -apple-system;
+    border-radius: 30px;
+    background-color: $green-scale-1;
+
+    &-options {
+      display: flex;
+      align-items: center;
+
+      &-list {
+        padding: 1%;
+        width: 200px;
+        font-weight: bold;
+        border-radius: 17px;
+        color: $green-scale-1;
+        background-color: $green-scale-2;
+
+        input[type="radio"] {
+          accent-color: $green-scale-1;
+        }
+      }
+
+      &-description {
+        color: $white-scale-2;
+        padding-left: 3%;
+        height: 210px;
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+.File-submission {
+  @include general-alignment;
+
+  &-input {
+    background-color: $green-scale-1;
+    margin: 0px 10px;
+  }
+
+  button {
+    @include icon-button;
+  }
+}
